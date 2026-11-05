@@ -64,8 +64,8 @@ export const FanpageConnectionModal: React.FC<FanpageConnectionModalProps> = ({
 }) => {
   if (!isOpen) return null;
 
-  // Active Tab
-  const [activeTab, setActiveTab] = useState<'fb_token_connect' | 'single_page' | 'connected_list' | 'webhook_setup' | 'simulate_test'>('fb_token_connect');
+  // Active Tab — mặc định là nhập thủ công Page ID + Token (đơn giản, hoạt động ngay)
+  const [activeTab, setActiveTab] = useState<'fb_token_connect' | 'single_page' | 'connected_list' | 'webhook_setup' | 'simulate_test'>('single_page');
 
   // --- Facebook Browser Login Flow State (Chuẩn Achat) ---
   const [isFbLoggedIn, setIsFbLoggedIn] = useState(true);
